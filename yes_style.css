@@ -22,3 +22,36 @@ body {
     max-width: 500px; 
     height: auto; 
 }
+
+.button {
+    margin-top: auto; 
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button button {
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 75, 92, 0.4);
+    
+}
+
+.button button:hover {
+    background-color: #ff1e3c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(255, 75, 92, 0.5);
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    justify-content: end;
+}
