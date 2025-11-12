@@ -21,7 +21,7 @@ body {
 
 .gif_container img {
     width: 100%;
-    max-width: 500px;
+    max-width: 200px;
     height: auto;
 }
 
@@ -74,6 +74,77 @@ body {
     }
 
     .gif_container img {
+        max-width: 200px;
+    }
+}
+/* 🔹 Responsif untuk tampilan mobile */
+@media (max-width: 600px) {
+    .header_text {
+        font-size: 2em;
+    }
+
+    .button button {
+        width: 80%; /* tombol menyesuaikan lebar layar */
+        padding: 12px 0; /* tinggi tombol proporsional */
+        font-size: 1em;
+    }
+
+    .button a {
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
+
+    .gif_container img {
         max-width: 300px;
+    }
+}
+
+  /* ---- Falling Hearts Animation ---- */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* biar nggak ganggu klik tombol */
+    overflow: hidden;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    color: #ff4b5c;
+    font-size: 20px;
+    animation: fall 5s linear infinite;
+    opacity: 0.8;
+}
+
+/* animasi jatuh */
+@keyframes fall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ---- Responsif Mobile ---- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+        padding: 0 10px;
+    }
+
+    .yes-button, .no-button {
+        width: 80%;
+        padding: 10px 0;
+        font-size: 1em;
+    }
+
+    .gif_container img {
+        max-width: 250px;
     }
 }
