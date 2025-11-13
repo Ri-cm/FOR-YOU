@@ -146,4 +146,6 @@ document.getElementById("envelope").addEventListener("click", function () {
   if (loveSong) loveSong.play();
 });
 
-
+function goToNextPage() {
+  window.location.href = "ajak.html";
+}

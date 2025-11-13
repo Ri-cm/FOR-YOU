@@ -7,40 +7,25 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="hearts-container"></div>
-  <div class="container">
-    <h1>Will you go out with me on civilday concert?</h1>
-    <div class="buttons">
-      <button class="yes-button" onclick="handleYesClick()">Yes</button>
-      <button class="no-button" onclick="handleNoClick()">No</button>
-    </div>
-    <div class="gif_container">
-      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
-    </div>
-  </div>
 
   <div class="main-layout">
-    <!-- Amplop surat di kiri -->
-   <div class="envelope-section">
-  <!-- Tulisan dan panah animasi di atas amplop -->
-  <div class="arrow-text" id="arrowText">
-    <p>Click this 💌</p>
-    <div class="arrow bounce">
-      <svg width="40" height="40" fill="#ff4d6d" viewBox="0 0 24 24">
-        <path d="M12 21l-8-9h6V3h4v9h6z"/>
-      </svg>
+    <!-- Amplop dan tulisan -->
+    <div class="envelope-section">
+      <div class="arrow-text" id="arrowText">
+        <p>Baca Dulu 💌</p>
+        <div class="arrow bounce">
+          <svg width="40" height="40" fill="#ff4d6d" viewBox="0 0 24 24">
+            <path d="M12 21l-8-9h6V3h4v9h6z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Amplop -->
+      <div class="envelope" id="envelope" onclick="openLetter()"></div>
     </div>
-  </div>
 
-  <!-- Amplop surat -->
-  <div class="envelope" id="envelope"></div>
-
-
-
-
-
-    <!-- Isi surat di kanan -->
-    <div class="letter" id="letter">
+    <!-- Surat -->
+    <div class="letter hidden" id="letter">
       <h2>10 Reasons Why We Should Date ❤️</h2>
       <ol>
         <li>I will treat you right.</li>
@@ -55,15 +40,28 @@
         <li>We can spend lots of time together. 💞</li>
       </ol>
 
-      <!-- 🎵 Pemutar lagu di dalam surat -->
+      <!-- Pemutar lagu -->
       <div class="music-player">
         <audio id="loveSong" controls>
           <source src="hivi-satu-satunya-official-music-video_ipeEVawG.mp3" type="audio/mpeg">
           Browser kamu tidak mendukung pemutar audio.
         </audio>
       </div>
-    </div>
+
+      <!-- Gambar emoji -->
+      <div class="emoji-gallery">
+        <img src="WhatsApp Image 2025-11-13 at 18.06.22.jpeg" alt="Emoji 1">
+        <img src="WhatsApp Image 2025-11-13 at 18.06.49.jpeg" alt="Emoji 2">
+        <img src="WhatsApp Image 2025-11-13 at 18.06.22 (1).jpeg" alt="Emoji 3">
+      </div>
+
+     
   </div>
+   <!-- Tombol Next -->
+      <button class="next-btn" onclick="goToNextPage()">Next Page</button>
+    </div>
+
+  <div class="hearts-container"></div>
 
   <script src="script.js"></script>
 </body>
