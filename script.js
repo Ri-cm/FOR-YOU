@@ -126,3 +126,24 @@ arrow.addEventListener("click", () => {
   envelope.click();
 });
 
+document.getElementById("envelope").addEventListener("click", function () {
+  const letter = document.getElementById("letter");
+  const arrowText = document.getElementById("arrowText");
+
+  // Hilangkan teks dan panah dengan animasi lembut
+  arrowText.style.opacity = "0";
+  arrowText.style.transform = "scale(0.9)";
+  setTimeout(() => {
+    arrowText.style.display = "none";
+  }, 500);
+
+  // Tampilkan surat dengan efek fade-in
+  letter.style.display = "block";
+  letter.scrollIntoView({ behavior: "smooth" });
+
+  // Putar lagu otomatis jika ada
+  const loveSong = document.getElementById("loveSong");
+  if (loveSong) loveSong.play();
+});
+
+
