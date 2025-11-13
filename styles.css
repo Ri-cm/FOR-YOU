@@ -382,3 +382,63 @@ h1 {
     font-size: 12px;
   }
 }
+
+/* Arrow animasi */
+.arrow  {
+  font-size: 2.5rem;
+  color: #ff4d6d;
+  text-align: center;
+  margin-top: 10px;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+}
+
+/* Efek melompat ke bawah */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.letter {
+  display: none;
+  background: #fff0f5;
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  animation: fade-in 1s ease forwards;
+}
+
+.letter h2 {
+  text-align: center;
+  color: #ff4d6d;
+}
+
+.letter ol {
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+.music-player {
+  text-align: center;
+  margin-top: 15px;
+}
+
+audio {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

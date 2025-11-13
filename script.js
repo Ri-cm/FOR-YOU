@@ -98,11 +98,31 @@ function createHeart() {
 // buat hati setiap 300ms
 setInterval(createHeart, 300);
 
-// Efek klik amplop menampilkan surat
-const envelope = document.getElementById('envelope');
-const letter = document.getElementById('letter');
+// Tombol amplop & surat
+const envelope = document.getElementById("envelope");
+const letter = document.getElementById("letter");
+const arrow = document.querySelector(".arrow");
+const loveSong = document.getElementById("loveSong");
 
-envelope.addEventListener('click', () => {
-  envelope.style.display = 'none'; // sembunyikan amplop
-  letter.style.display = 'block'; // tampilkan surat
+letter.style.display = "none";
+
+envelope.addEventListener("click", () => {
+  // Sembunyikan amplop dan panah
+  envelope.style.display = "none";
+  arrow.style.display = "none";
+
+  // Tampilkan surat
+  letter.style.display = "block";
+  letter.classList.add("fade-in");
+
+  // Mainkan lagu
+  loveSong.play().catch(err => {
+    console.log("Autoplay diblokir, pengguna harus klik tombol play.", err);
+  });
 });
+
+// Biar panah juga bisa klik amplop
+arrow.addEventListener("click", () => {
+  envelope.click();
+});
+
